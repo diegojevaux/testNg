@@ -1,4 +1,4 @@
-package pack1;
+package AndroidApp;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

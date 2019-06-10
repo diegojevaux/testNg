@@ -1,4 +1,4 @@
-package pack2;
+package AndroidBrowser;
 
 import org.testng.annotations.*;
 

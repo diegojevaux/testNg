@@ -4,8 +4,8 @@
 <suite name="Automation">
     <test name="Smoke test">
         <classes>
-            <class name="pack1.Annotations2"/>
-            <class name="pack1.Annotations"/>
+            <class name="AndroidApp.Annotations2"/>
+            <class name="AndroidApp.Annotations"/>
         </classes>
     </test>
 </suite>

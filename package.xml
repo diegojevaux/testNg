@@ -4,8 +4,8 @@
 <suite name="Automation">
     <test name="Smoke test">
         <packages>
-            <package name="pack1"/>
-            <package name="pack2"/>
+            <package name="AndroidApp"/>
+            <package name="AndroidBrowser"/>
         </packages>
     </test>
 </suite>
