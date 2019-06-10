@@ -2,13 +2,19 @@ package AndroidApp;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import org.testng.annotations.Test;
+
 
 import java.net.MalformedURLException;
 
+
 public class Basics extends Base {
 
-    public static void main(String[] args) throws MalformedURLException {
-
+    @Test
+    public static void main() throws MalformedURLException {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case, change is real or emulator
         /* xpath syntax
          * //tagName[@attribute='value']
@@ -23,6 +29,8 @@ public class Basics extends Base {
         driver.findElementByClassName("android.widget.EditText").sendKeys("hello");
         //click on the second element with the same classname, in this case, the second one, which is index 1 on uiautomator
         driver.findElementsByClassName("android.widget.Button").get(1).click();
+
+        service.stop();
 
 
     }

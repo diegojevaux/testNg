@@ -1,8 +1,6 @@
-package AndroidApp;
+package AndroidBrowser;
 
-import org.testng.annotations.*;
-
-public class Annotations {
+public class Annotations3 {
 
     @BeforeMethod //Executes on every method
     public void UserIdGenerator() {

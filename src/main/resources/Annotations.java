@@ -1,6 +1,4 @@
-package AndroidBrowser;
-
-import org.testng.annotations.*;
+package AndroidApp;
 
 public class Annotations {
 
