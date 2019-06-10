@@ -2,15 +2,20 @@ package AndroidBrowser;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
 public class Browser extends BaseChrome {
 
-    public static void main(String[] args) throws MalformedURLException {
+    @Test
+    public static void main() throws MalformedURLException {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
         AndroidDriver<AndroidElement> driver = capabilities(); // call this in every test case
 
         // Now you need Remote device in Chrome desktop enabled and enter the URL on
@@ -38,6 +43,8 @@ public class Browser extends BaseChrome {
             throw e;
         }
         System.out.println("True");
+
+        service.stop();
 
     }
 

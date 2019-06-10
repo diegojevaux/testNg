@@ -15,6 +15,7 @@ public class Basics extends Base {
     public static void main() throws MalformedURLException {
         AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
         service.start();
+
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case, change is real or emulator
         /* xpath syntax
          * //tagName[@attribute='value']
