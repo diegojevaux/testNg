@@ -5,7 +5,9 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -13,8 +15,11 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class HybridApps {
-    public static void main(String[] args) throws MalformedURLException {
 
+    @Test
+    public static void main() throws MalformedURLException {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
         //cap.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
@@ -40,6 +45,8 @@ public class HybridApps {
         //to enable WebView debugging, call the static method setWebContentsDebuggingEnabled on the WebView class
         driver.context("WEBVIEW_chrome"); //use the for loop to ger the webview name, in this case WEBVIEW_chrome. In this case, it's not enabled on the application and will fail.
         driver.findElementByName("q").sendKeys("Handling hybrid apps");
+
+        service.stop();
 
 
     }

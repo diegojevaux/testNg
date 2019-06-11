@@ -2,13 +2,18 @@ package AndroidApp;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 public class UiAutomatorTest extends Base {
 
-    public static void main(String[] args) throws MalformedURLException {
+    @Test
+    public static void main() throws MalformedURLException {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
 
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
 
@@ -20,6 +25,7 @@ public class UiAutomatorTest extends Base {
         //driver.findElementsByAndroidUIAutomator("new UiSelector().property(value)");
         System.out.println(driver.findElementsByAndroidUIAutomator("new UiSelector().clickable(true)").size());
 
+        service.stop();
 
     }
 

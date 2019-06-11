@@ -3,6 +3,7 @@ package AndroidApp;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidTouchAction;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.WebElement;
 
 import java.net.MalformedURLException;
@@ -13,7 +14,11 @@ import static java.time.Duration.ofSeconds;
 
 public class SwipeDemo extends Base {
 
-    public static void main(String[] args) throws MalformedURLException {
+    public static void main() throws MalformedURLException {
+
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
+
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
 
         driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
@@ -27,6 +32,8 @@ public class SwipeDemo extends Base {
         WebElement first = driver.findElementByXPath("//*[@content-desc='15']");
         WebElement last = driver.findElementByXPath("//*[@content-desc='45']");
         touch.longPress(longPressOptions().withElement(element(first)).withDuration(ofSeconds(2))).moveTo(element(last)).release().perform();
+
+        service.stop();
 
 
     }

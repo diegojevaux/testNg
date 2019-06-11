@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
@@ -15,7 +16,8 @@ import static java.time.Duration.ofSeconds;
 
 public class Gestures extends Base {
 
-    public static void main(String[] args) throws MalformedURLException {
+    @Test
+    public static void main() throws MalformedURLException {
         AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
         service.start();
 

@@ -4,6 +4,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
@@ -11,7 +13,10 @@ import java.net.MalformedURLException;
 
 public class Misc extends Base {
 
-    public static void main(String[] args) throws MalformedURLException {
+    @Test
+    public static void main() throws MalformedURLException {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
 
         System.out.println(driver.currentActivity());
@@ -21,6 +26,8 @@ public class Misc extends Base {
         // driver.hideKeyboard();
         driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
+
+        service.stop();
 
 
     }
