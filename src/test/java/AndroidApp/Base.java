@@ -38,6 +38,7 @@ public class Base {
         //File fs = new File (f, "ApiDemos-debug.apk");
 
         DesiredCapabilities cap = new DesiredCapabilities();
+        cap.setCapability("automationName", "UiAutomator2");
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
         //cap.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
