@@ -16,4 +16,6 @@ public class Preferences {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='3. Preference dependencies']")
     public WebElement dependencies;
+
+
 }

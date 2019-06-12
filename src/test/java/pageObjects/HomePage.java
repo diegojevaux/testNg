@@ -16,7 +16,7 @@ public class HomePage {
     }
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Preference']")
-    public WebElement Preferences;
+    public WebElement preferences;
 
 
 }
