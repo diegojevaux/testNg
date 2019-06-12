@@ -39,7 +39,6 @@ public class Basics extends Base {
         pd.wifi.click();
         //driver.findElementByClassName("android.widget.EditText").sendKeys("hello");
         pd.wifiText.sendKeys("hello");
-
         //click on the second element with the same classname, in this case, the second one, which is index 1 on uiautomator
         //driver.findElementsByClassName("android.widget.Button").get(1).click();
         pd.buttons.get(1).click();
