@@ -12,8 +12,8 @@ public class UiAutomatorTest extends Base {
 
     @Test
     public static void main() throws MalformedURLException {
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
+        Base.startServer();
+
 
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
 
@@ -25,7 +25,8 @@ public class UiAutomatorTest extends Base {
         //driver.findElementsByAndroidUIAutomator("new UiSelector().property(value)");
         System.out.println(driver.findElementsByAndroidUIAutomator("new UiSelector().clickable(true)").size());
 
-        service.stop();
+        Base.stopServer();
+
 
     }
 

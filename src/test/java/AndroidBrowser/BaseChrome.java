@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -11,6 +12,18 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class BaseChrome {
+
+    public static void startServer() {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
+
+    }
+
+    public static void stopServer() {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.stop();
+
+    }
 
     public static AndroidDriver<AndroidElement> capabilities() throws MalformedURLException {
 

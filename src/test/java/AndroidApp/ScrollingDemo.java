@@ -9,9 +9,9 @@ import java.net.MalformedURLException;
 public class ScrollingDemo extends Base {
 
     public static void main() throws MalformedURLException {
+        Base.startServer();
 
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
+
 
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
         driver.findElementsByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Views\"));");
@@ -19,8 +19,8 @@ public class ScrollingDemo extends Base {
         //driver.findElementsByAndroidUIAutomator("new UiSelector().property(value)");
         driver.findElementsByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Radio Group\"));"); //it will scroll until 'view' text = WebView
 
-        service.stop();
 
+        Base.stopServer();
 
     }
 

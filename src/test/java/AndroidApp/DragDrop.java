@@ -15,8 +15,8 @@ public class DragDrop extends Base {
     @Test
     public static void main() throws MalformedURLException {
 
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
+
+        Base.startServer();
 
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
         driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
@@ -31,7 +31,8 @@ public class DragDrop extends Base {
         // if you have multiple actions like withDuration or withPosition you have to use longPressOptions
         touch.longPress(element(source)).moveTo(element(destination)).release().perform(); //if you have to use JUST longPress
 
-        service.stop();
+        Base.stopServer();
+
 
 
     }

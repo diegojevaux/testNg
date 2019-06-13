@@ -5,15 +5,17 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class Base {
 
-/*	public void startServer() {
+/*	public static void startServer() {
 		Runtime runtime = Runtime.getRuntime();
 		try {
 			runtime.exec("cmd.exe /c start cmd.exe /k \"appium -a 127.0.0.1 -p 4723 --session-override -dc \"{\"\"noReset\"\": \"\"false\"\"}\"\"");
@@ -22,7 +24,8 @@ public class Base {
 			e.printStackTrace();
 		}
 	}
-	public void stopServer() {
+
+	public static void stopServer() {
 		Runtime runtime = Runtime.getRuntime();
 		try {
 			runtime.exec("taskkill /F /IM node.exe");
@@ -31,6 +34,19 @@ public class Base {
 			e.printStackTrace();
 		}
 	}*/
+
+    public static void startServer() {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
+
+    }
+
+    public static void stopServer() {
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.stop();
+
+    }
+
 
     public static AndroidDriver<AndroidElement> capabilities() throws MalformedURLException {
 

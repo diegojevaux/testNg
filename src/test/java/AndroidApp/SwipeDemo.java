@@ -16,8 +16,8 @@ public class SwipeDemo extends Base {
 
     public static void main() throws MalformedURLException {
 
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
+        Base.startServer();
+
 
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
 
@@ -33,7 +33,7 @@ public class SwipeDemo extends Base {
         WebElement last = driver.findElementByXPath("//*[@content-desc='45']");
         touch.longPress(longPressOptions().withElement(element(first)).withDuration(ofSeconds(2))).moveTo(element(last)).release().perform();
 
-        service.stop();
+        Base.stopServer();
 
 
     }

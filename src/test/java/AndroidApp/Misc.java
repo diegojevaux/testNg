@@ -15,8 +15,8 @@ public class Misc extends Base {
 
     @Test
     public static void main() throws MalformedURLException {
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
+        Base.startServer();
+
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
 
         System.out.println(driver.currentActivity());
@@ -27,7 +27,7 @@ public class Misc extends Base {
         driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
 
-        service.stop();
+        Base.stopServer();
 
 
     }

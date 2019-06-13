@@ -18,11 +18,8 @@ public class Gestures extends Base {
 
     @Test
     public static void main() throws MalformedURLException {
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
+        Base.startServer();
 
-/*		Base appiumServer = new Base();
-		appiumServer.startServer();*/  //Base class
 
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case
         driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
@@ -39,9 +36,7 @@ public class Gestures extends Base {
         touch.longPress(longPressOptions().withElement(element(peopleNames)).withDuration(ofSeconds(2))).release().perform();
         System.out.println(driver.findElementById("android:id/title").isDisplayed());
 
-        //appiumServer.stopServer(); //Base class
-        service.stop();
-
+        Base.stopServer();
 
     }
 

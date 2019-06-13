@@ -1,5 +1,6 @@
 package AndroidBrowser;
 
+import AndroidApp.Base;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -14,10 +15,10 @@ public class Browser extends BaseChrome {
 
     @Test
     public static void main() throws MalformedURLException {
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
+
         AndroidDriver<AndroidElement> driver = capabilities(); // call this in every test case
 
+        Base.startServer();
         // Now you need Remote device in Chrome desktop enabled and enter the URL on
         // "new tab" then "inspect element" you want
 
@@ -44,7 +45,8 @@ public class Browser extends BaseChrome {
         }
         System.out.println("True");
 
-        service.stop();
+
+        Base.stopServer();
 
     }
 

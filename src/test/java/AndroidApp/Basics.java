@@ -16,9 +16,8 @@ public class Basics extends Base {
 
     @Test
     public static void main() throws MalformedURLException {
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
 
+        Base.startServer();
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case, change is real or emulator
         HomePage h = new HomePage(driver);
         Preferences p = new Preferences(driver);
@@ -43,7 +42,7 @@ public class Basics extends Base {
         //driver.findElementsByClassName("android.widget.Button").get(1).click();
         pd.buttons.get(1).click();
 
-        service.stop();
+        Base.stopServer();
 
 
     }

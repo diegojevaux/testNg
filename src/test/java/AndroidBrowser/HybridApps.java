@@ -1,5 +1,6 @@
 package AndroidBrowser;
 
+import AndroidApp.Base;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -16,8 +17,8 @@ import java.util.concurrent.TimeUnit;
 public class HybridApps {
     public static void main() throws MalformedURLException {
 
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-        service.start();
+        Base.startServer();
+
 
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
@@ -45,7 +46,6 @@ public class HybridApps {
         driver.context("WEBVIEW_chrome"); //use the for loop to ger the webview name, in this case WEBVIEW_chrome. In this case, it's not enabled on the application and will fail.
         driver.findElementByName("q").sendKeys("Handling hybrid apps");
 
-        service.stop();
 
     }
 
