@@ -15,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Base {
 
+    public static AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+
 /*	public static void startServer() {
 		Runtime runtime = Runtime.getRuntime();
 		try {
@@ -36,13 +38,11 @@ public class Base {
 	}*/
 
     public static void startServer() {
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
         service.start();
 
     }
 
     public static void stopServer() {
-        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
         service.stop();
 
     }
