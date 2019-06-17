@@ -12,11 +12,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class ExcelDriven extends Base {
+    // use XSSF for MS-Office files - HSSF is for Open Office
     private static HSSFWorkbook wb;
     private static HSSFSheet sheet;
     private static HSSFRow row;
     private static HSSFCell cell;
     private static FileInputStream fis;
+
 
     public static void main(String[] args) throws IOException {
 

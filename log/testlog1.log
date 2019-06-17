@@ -1,0 +1,5 @@
+2019-06-17 16:22:10,732 [main] DEBUG log4j - this is debug
+2019-06-17 16:22:10,746 [main] INFO log4j - This is a Info
+2019-06-17 16:22:10,747 [main] WARN log4j - This is a warn
+2019-06-17 16:22:10,747 [main] ERROR log4j - this is an error
+2019-06-17 16:22:10,747 [main] FATAL log4j - This a Fatal
