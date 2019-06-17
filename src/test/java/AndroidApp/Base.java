@@ -6,6 +6,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
@@ -16,6 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class Base {
 
     public static AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+
 
 /*	public static void startServer() {
 		Runtime runtime = Runtime.getRuntime();

@@ -19,6 +19,7 @@ public class PreferenceDependencies {
     @AndroidFindBy(id = "android:id/checkbox")
     public WebElement prefCheckbox;
 
+    //when there's 2 or more elements with the same name, use xpath with the index provided in uiautomator, in this case [2]
     @AndroidFindBy(xpath = "(//android.widget.RelativeLayout)[2]")
     public WebElement wifi;
 

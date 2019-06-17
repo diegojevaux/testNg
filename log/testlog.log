@@ -1,5 +1,17 @@
-2019-06-17 16:22:10,732 - log4j -DEBUG - this is debug
-2019-06-17 16:22:10,746 - log4j -INFO - This is a Info
-2019-06-17 16:22:10,747 - log4j -WARN - This is a warn
-2019-06-17 16:22:10,747 - log4j -ERROR - this is an error
-2019-06-17 16:22:10,747 - log4j -FATAL - This a Fatal
+2019-06-17 16:49:23,777 - Basics -INFO - Appium Server started
+2019-06-17 16:49:40,641 - Basics -INFO - Preferences clicked
+2019-06-17 16:49:45,251 - Basics -INFO - Appium Server Stopped
+2019-06-17 16:55:40,440 - Basics -INFO - Appium Server started
+2019-06-17 16:55:56,138 - Basics -INFO - Preferences clicked
+2019-06-17 16:56:01,108 - Basics -INFO - Appium Server Stopped
+2019-06-17 17:12:23,438 - Basics -INFO - Appium Server started
+2019-06-17 17:12:46,031 - Basics -ERROR - Element not found
+2019-06-17 17:18:58,801 - log4j -INFO - Appium Server started
+2019-06-17 17:19:13,450 - log4j -INFO - Preferences clicked
+2019-06-17 17:19:18,320 - log4j -INFO - Appium Server Stopped
+2019-06-17 17:31:46,120 - Basics.java -INFO - Appium Server started
+2019-06-17 17:32:02,790 - Basics.java -INFO - Preferences clicked
+2019-06-17 17:32:07,514 - Basics.java -INFO - Appium Server Stopped
+2019-06-17 17:32:38,021 - Basics.java -INFO - Appium Server started
+2019-06-17 17:32:54,187 - Basics.java -INFO - Preferences clicked
+2019-06-17 17:32:58,749 - Basics.java -INFO - Appium Server Stopped

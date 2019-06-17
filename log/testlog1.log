@@ -1,5 +1,6 @@
-2019-06-17 16:22:10,732 [main] DEBUG log4j - this is debug
-2019-06-17 16:22:10,746 [main] INFO log4j - This is a Info
-2019-06-17 16:22:10,747 [main] WARN log4j - This is a warn
-2019-06-17 16:22:10,747 [main] ERROR log4j - this is an error
-2019-06-17 16:22:10,747 [main] FATAL log4j - This a Fatal
+2019-06-17 17:31:46,120 [main] INFO Basics.java - Appium Server started
+2019-06-17 17:32:02,790 [main] INFO Basics.java - Preferences clicked
+2019-06-17 17:32:07,514 [main] INFO Basics.java - Appium Server Stopped
+2019-06-17 17:32:38,021 [main] INFO Basics.java - Appium Server started
+2019-06-17 17:32:54,187 [main] INFO Basics.java - Preferences clicked
+2019-06-17 17:32:58,749 [main] INFO Basics.java - Appium Server Stopped
