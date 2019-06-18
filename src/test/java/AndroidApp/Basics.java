@@ -17,11 +17,12 @@ public class Basics extends Base {
 
     @Test
     public static void main() throws MalformedURLException {
-        Logger logger = Logger.getLogger("Basics.java");
 
+        Logger logger = Logger.getLogger("Basics.java");
         Base.startServer();
         logger.info("Appium Server started");
         AndroidDriver<AndroidElement> driver = capabilities(); //call this in every test case, change is real or emulator
+
         HomePage h = new HomePage(driver);
         Preferences p = new Preferences(driver);
         PreferenceDependencies pd = new PreferenceDependencies(driver);

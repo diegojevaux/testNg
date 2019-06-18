@@ -1,6 +1,10 @@
-2019-06-17 17:31:46,120 [main] INFO Basics.java - Appium Server started
-2019-06-17 17:32:02,790 [main] INFO Basics.java - Preferences clicked
-2019-06-17 17:32:07,514 [main] INFO Basics.java - Appium Server Stopped
-2019-06-17 17:32:38,021 [main] INFO Basics.java - Appium Server started
-2019-06-17 17:32:54,187 [main] INFO Basics.java - Preferences clicked
-2019-06-17 17:32:58,749 [main] INFO Basics.java - Appium Server Stopped
+2019-06-18 11:17:04,437 [main] INFO Basics.java - Appium Server started
+2019-06-18 11:17:19,119 [main] INFO Basics.java - Preferences clicked
+2019-06-18 11:17:23,731 [main] INFO Basics.java - Appium Server Stopped
+2019-06-18 16:42:36,141 [main] INFO JdbcConnection.java - Appium Server started
+2019-06-18 16:43:59,937 [main] INFO JdbcConnection.java - Appium Server started
+2019-06-18 16:53:03,055 [main] INFO JdbcConnection.java - Appium Server started
+2019-06-18 17:04:39,265 [main] INFO JdbcConnection.java - Appium Server started
+2019-06-18 17:17:22,947 [main] INFO JdbcConnection.java - Appium Server started
+2019-06-18 17:18:27,566 [main] INFO JdbcConnection.java - Appium Server started
+2019-06-18 17:19:56,731 [main] INFO JdbcConnection.java - Appium Server started
